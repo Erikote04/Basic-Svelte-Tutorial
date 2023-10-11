@@ -4,4 +4,4 @@
 </script>
 
 <h1>Hello {name.toUpperCase()}!</h1>
-<img src={src} alt="Svelte logo">
+<img {src} alt="Svelte logo">
