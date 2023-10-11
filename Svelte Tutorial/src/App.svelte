@@ -3,5 +3,18 @@
   let name = 'Svelte';
 </script>
 
-<h1>Hello {name.toUpperCase()}!</h1>
-<img {src} alt="{name} logo">
+<main>
+  <h1>Hello {name.toUpperCase()}!</h1>
+
+  <p>This is a paragraph</p>
+
+  <img {src} alt="{name} logo">
+</main>
+
+<style>
+  p {
+		color: goldenrod;
+		font-family: 'Comic Sans MS', cursive;
+		font-size: 2em;
+	}
+</style>
