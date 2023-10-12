@@ -10,6 +10,7 @@
   function increment() {
     count += 1
   }
+  $: doubled = count * 2
 </script>
 
 <main>
@@ -25,6 +26,7 @@
     Clicked {count}
     {count === 1 ? 'time' : 'times'}
   </button>
+  <p>{count} doubled is {doubled}</p>
 </main>
 
 <style>
