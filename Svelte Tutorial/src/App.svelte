@@ -1,21 +1,27 @@
 <script>
   // INTRODUCTION
-  import Nested from './Nested.svelte'
-  let src = './assets/svelte.svg'
-  let name = 'Svelte'
-  let string = 'This string contains some <strong>HTML!!!</strong>'
+  import Nested from './Nested.svelte';
+  let src = './assets/svelte.svg';
+  let name = 'Svelte';
+  let string = 'This string contains some <strong>HTML!!!</strong>';
 
   // REACTIVITY
-  let count = 0
+  let count = 0;
   function increment() {
-    count += 1
+    count += 1;
   }
-  $: doubled = count * 2
+  $: doubled = count * 2;
+  $: if (count >= 10) {
+    alert('count is dangerously high!');
+    count = 0;
+  }
+  /*
+  $: console.log(`the count is ${count}`); -> This will log the value of count whenever it changes
   $: {
-    console.log(`the count is ${count}`)
-    console.log(`this will also be logged whenever count changes`)
+    console.log(`the count is ${count}`);
+    console.log(`this will also be logged whenever count changes`);
   }
-  // $: console.log(`the count is ${count}`) This will log the value of count whenever it changes
+  */
 </script>
 
 <main>
