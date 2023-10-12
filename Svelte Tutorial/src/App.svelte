@@ -1,6 +1,7 @@
 <script>
+  import Nested from './Nested.svelte'
   let src = './assets/svelte.svg'
-  let name = 'Svelte';
+  let name = 'Svelte'
 </script>
 
 <main>
@@ -9,6 +10,8 @@
   <p>This is a paragraph</p>
 
   <img {src} alt="{name} logo">
+
+  <Nested />
 </main>
 
 <style>
