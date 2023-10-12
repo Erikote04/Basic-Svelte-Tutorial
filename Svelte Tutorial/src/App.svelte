@@ -18,8 +18,7 @@
 
   let numbers = [1, 2, 3, 4];
   function addNumber() {
-    numbers.push(numbers.length + 1);
-    numbers = numbers; // We need to be redundant to cause updates
+    numbers = [...numbers, numbers.length + 1];
   }
   $: sum = numbers.reduce((total, currentNumber) => total + currentNumber, 0);
   /*
