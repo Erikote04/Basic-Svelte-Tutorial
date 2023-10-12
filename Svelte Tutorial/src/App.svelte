@@ -15,6 +15,13 @@
     alert('count is dangerously high!');
     count = 0;
   }
+
+  let numbers = [1, 2, 3, 4];
+  function addNumber() {
+    numbers.push(numbers.length + 1);
+    numbers = numbers; // We need to be redundant to cause updates
+  }
+  $: sum = numbers.reduce((total, currentNumber) => total + currentNumber, 0);
   /*
   $: console.log(`the count is ${count}`); -> This will log the value of count whenever it changes
   $: {
@@ -38,6 +45,11 @@
     {count === 1 ? 'time' : 'times'}
   </button>
   <p>{count} doubled is {doubled}</p>
+
+  <p>{numbers.join(' + ')} = {sum}</p>
+  <button on:click={addNumber}>
+    Add a number
+  </button>
 </main>
 
 <style>
