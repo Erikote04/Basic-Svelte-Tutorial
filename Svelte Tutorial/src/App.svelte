@@ -14,7 +14,7 @@
 
   <Nested />
 
-  <p>{string}</p> <!--This doesn't works-->
+  <p>{@html string}</p> <!--This works-->
 </main>
 
 <style>
