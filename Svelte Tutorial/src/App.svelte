@@ -11,6 +11,7 @@
     count += 1
   }
   $: doubled = count * 2
+  $: console.log(`the count is ${count}`) // This will log the value of count whenever it changes
 </script>
 
 <main>
