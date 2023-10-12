@@ -2,6 +2,7 @@
   import Nested from './Nested.svelte'
   let src = './assets/svelte.svg'
   let name = 'Svelte'
+  let string = 'This string contains some <strong>HTML!!!</strong>'
 </script>
 
 <main>
@@ -12,6 +13,8 @@
   <img {src} alt="{name} logo">
 
   <Nested />
+
+  <p>{string}</p> <!--This doesn't works-->
 </main>
 
 <style>
