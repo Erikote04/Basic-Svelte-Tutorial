@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
   // INTRODUCTION
   import Nested from './Nested.svelte';
   let src = './assets/svelte.svg';
@@ -46,6 +48,7 @@
 
   <!--PROPS-->
   <Nested answer={42} />
+  <Nested />
 </main>
 
 <style>
