@@ -57,11 +57,7 @@
   <Nested answer={42} />
   <Nested />
 
-  <PackageInfo
-	name={pkg.name}
-	speed={pkg.speed}
-	website={pkg.website}
-/>
+  <PackageInfo {...pkg}/>
 </main>
 
 <style>
