@@ -25,6 +25,13 @@
   $: sum = numbers.reduce((total, currentNumber) => total + currentNumber, 0);
 
   // PROPS
+  import PackageInfo from './PackageInfo.svelte';
+	const pkg = {
+		name: 'svelte',
+		speed: 'blazing',
+		version: 4,
+		website: 'https://svelte.dev'
+	};
 </script>
 
 <main>
@@ -49,6 +56,12 @@
   <!--PROPS-->
   <Nested answer={42} />
   <Nested />
+
+  <PackageInfo
+	name={pkg.name}
+	speed={pkg.speed}
+	website={pkg.website}
+/>
 </main>
 
 <style>
