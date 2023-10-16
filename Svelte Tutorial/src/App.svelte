@@ -1,6 +1,5 @@
 <script>
 // @ts-nocheck
-
   // INTRODUCTION
   import Nested from './Nested.svelte';
   let src = './assets/svelte.svg';
@@ -17,7 +16,6 @@
     alert('count is dangerously high!');
     count = 0;
   }
-
   let numbers = [1, 2, 3, 4];
   function addNumber() {
     numbers[numbers.length] = numbers.length + 1;
@@ -42,21 +40,24 @@
   <p>{@html string}</p> 
 
   <!--REACTIVITY-->
+  <p>{numbers.join(' + ')} = {sum}</p>
+  <button on:click={addNumber}>
+    Add a number
+  </button>
   <button on:click={increment}>
     Clicked {count}
     {count === 1 ? 'time' : 'times'}
   </button>
   <p>{count} doubled is {doubled}</p>
 
-  <p>{numbers.join(' + ')} = {sum}</p>
-  <button on:click={addNumber}>
-    Add a number
-  </button>
+  <!--LOGIC-->
+  {#if count > 10}
+    <p>{count} is greater than 10</p>
+  {/if}
 
   <!--PROPS-->
   <Nested answer={42} />
   <Nested />
-
   <PackageInfo {...pkg}/>
 </main>
 
