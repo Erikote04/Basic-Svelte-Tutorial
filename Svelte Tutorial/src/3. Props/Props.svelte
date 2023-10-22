@@ -1,6 +1,6 @@
 <script>
 // @ts-nocheck
-  import Nested from './Nested-For-Props.svelte';
+  import Nested from './Nested.svelte';
   import PackageInfo from './PackageInfo.svelte';
 	const pkg = {
 		name: 'svelte',

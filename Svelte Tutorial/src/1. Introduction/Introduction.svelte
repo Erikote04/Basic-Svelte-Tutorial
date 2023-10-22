@@ -1,5 +1,5 @@
 <script>
-  import Nested from './Nested-For-Introduction.svelte';
+  import Nested from './Nested.svelte';
   let src = './assets/svelte.svg';
   let name = 'Svelte';
   let string = 'This string contains some <strong>HTML!!!</strong>';
