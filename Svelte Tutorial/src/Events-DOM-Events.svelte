@@ -6,7 +6,9 @@
 	}
 </script>
 
-<div on:pointermove={handleMove}>
+<div on:pointermove={(e) => {
+    m = { x: e.clientX, y: e.clientY }
+}}>
 	The pointer is at {m.x} x {m.y}
 </div>
 
