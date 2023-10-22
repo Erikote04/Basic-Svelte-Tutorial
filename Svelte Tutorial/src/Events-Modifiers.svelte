@@ -1,8 +1,7 @@
-<button on:click={() => alert('clicked')}>
+<button on:click|once={() => alert('clicked')}>
 	Click me
 </button>
 
 <!--
-    This is a handler event at it's natural state.
-    Every time we click the button an alert will appear.
+    Now the alert will only appear the first time we click the button.
 -->
