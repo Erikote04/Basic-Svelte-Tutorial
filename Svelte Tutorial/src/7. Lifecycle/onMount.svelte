@@ -1,6 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
 	import { paint } from './gradient.js';
+
+    // This will run after the component is first render
 	onMount(() => {
 		const canvas = document.querySelector('canvas');
 		const context = canvas.getContext('2d');
@@ -8,6 +10,7 @@
 			frame = requestAnimationFrame(loop);
 			paint(context, t);
 		});
+        // Cleanup function to stop the loop once the component has been destroyed
 		return () => {
 			cancelAnimationFrame(frame);
 		};
