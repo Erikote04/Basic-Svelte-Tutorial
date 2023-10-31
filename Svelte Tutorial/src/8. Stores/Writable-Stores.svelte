@@ -1,5 +1,5 @@
 <script>
-	import { count } from './stores.js';
+	import { count } from './writableStores.js';
 	import Incrementer from './Incrementer.svelte';
 	import Decrementer from './Decrementer.svelte';
 	import Resetter from './Resetter.svelte';
