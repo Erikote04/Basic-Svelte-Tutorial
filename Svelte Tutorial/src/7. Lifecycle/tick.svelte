@@ -1,4 +1,6 @@
 <script>
+	import { tick } from 'svelte';
+
 	let text = `Select some text and hit the tab key to toggle uppercase`;
 
 	async function handleKeydown(event) {
@@ -18,7 +20,7 @@
 			replacement +
 			value.slice(selectionEnd);
 
-		// this has no effect, because the DOM hasn't updated yet
+		await tick();
 		this.selectionStart = selectionStart;
 		this.selectionEnd = selectionEnd;
 	}
