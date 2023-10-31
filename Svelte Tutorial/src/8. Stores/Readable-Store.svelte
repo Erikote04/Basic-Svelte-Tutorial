@@ -1,5 +1,5 @@
 <script>
-	import { time } from './readableStores.js';
+	import { time, elapsed } from './readableStores.js';
 
 	const formatter = new Intl.DateTimeFormat(
 		'en',
@@ -13,3 +13,9 @@
 </script>
 
 <h1>The time is {formatter.format($time)}</h1>
+
+<p>
+	This page has been open for
+	{$elapsed}
+	{$elapsed === 1 ? 'second' : 'seconds'}
+</p>
